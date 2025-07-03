@@ -23,6 +23,19 @@
 - [Youtube](https://www.youtube.com/@getwebstudio)
 - [Discord](https://wstd.us/community)
 
+## Self Hosting
+
+1. Install dependencies using `pnpm install`.
+2. Start the database with
+   `docker compose -f apps/builder/docker-compose.yaml up -d`.
+3. Copy `apps/builder/.env` to `apps/builder/.env.development` and
+   adjust any required values.
+4. Launch the builder locally with
+   `pnpm --filter=@webstudio-is/builder dev`.
+5. For a production build, run
+   `pnpm --filter=@webstudio-is/builder build && pnpm --filter=@webstudio-is/builder start`.
+
+
 ## Thanks
 
 <a href="https://www.lost-pixel.com/"><img src="https://user-images.githubusercontent.com/29632358/168112844-77e76a0d-b96f-4bc8-b753-cd39f4afd428.png" width="50" height="50" alt="Lost Pixel" /></a>
